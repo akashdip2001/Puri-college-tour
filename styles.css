@@ -170,6 +170,47 @@ body {
     left: 5px;
 }
 
+
+.engine .wheel::after, .carriage .wheel::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Spokes for the wheels */
+.engine .wheel::before, .carriage .wheel::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform-origin: top center;
+}
+
+.engine .wheel::before {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.carriage .wheel::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.engine .wheel::before:nth-child(2), .carriage .wheel::before:nth-child(2) {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.engine .wheel::before:nth-child(3), .carriage .wheel::before:nth-child(3) {
+    transform: translateY(-50%) rotate(135deg);
+}
+
 .steam {
     position: absolute;
     top: -20px; /* Adjust the vertical position of the steam */
