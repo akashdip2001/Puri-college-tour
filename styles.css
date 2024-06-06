@@ -1,125 +1,29 @@
-html, body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1e90ff, #00ced1);
-    color: #fff;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-}
-
-.title {
-    margin-bottom: 20px;
-    font-size: 2em;
-    line-height: 1.5; /* Adjusted for better readability */
-}
-
-#countdown {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.countdown-element {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 15px;
-    width: 80px;
-    text-align: center;
-    margin: 5px;
-}
-
-.countdown-element span {
-    display: block;
-    font-size: 2em;
-    margin-bottom: 5px;
-}
-
-.label {
-    font-size: 0.8em;
-    font-weight: bold;
-}
-
-/* Hide desktop title by default */
-.desktop-title {
-    display: none;
-}
-
-/* Larger screens: display in single line */
-@media (min-width: 600px) {
-    .mobile-title {
-        display: none;
-    }
-
-    .desktop-title {
-        display: block;
-        font-size: 2em;
-    }
-
-    .countdown-element {
-        padding: 20px;
-        width: 100px;
-    }
-
-    .countdown-element span {
-        font-size: 2.5em;
-    }
-
-    .label {
-        font-size: 1em;
-    }
-}
-
-@media (min-width: 900px) {
-    .desktop-title {
-        font-size: 2.5em;
-    }
-
-    .countdown-element {
-        padding: 25px;
-        width: 120px;
-    }
-
-    .countdown-element span {
-        font-size: 3em;
-    }
-
-    .label {
-        font-size: 1.2em;
-    }
-}
-
-
 .train-track {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 100px; /* Adjust height as needed */
-    background-color: #444;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-line {
+    position: absolute;
+    bottom: 20px; /* Position the track line a bit above the bottom */
+    width: 100%;
+    height: 5px; /* Adjust height as needed */
+    background-color: #000;
 }
 
 .train {
     display: flex;
     align-items: center;
     animation: moveTrain 10s linear infinite;
+    position: relative;
+    bottom: 10px; /* Adjust the train's vertical position */
 }
 
 .engine, .carriage {
