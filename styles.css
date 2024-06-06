@@ -161,12 +161,34 @@ body {
     animation: rotateWheel 1s linear infinite;
 }
 
-.engine .wheel:nth-child(1), .carriage .wheel:nth-child(1) {
+.engine .wheel:nth-child(2), .carriage .wheel:nth-child(2) {
+    right: 5px;
+}
+
+.engine .wheel:nth-child(3), .carriage .wheel:nth-child(3) {
     left: 5px;
 }
 
-.engine .wheel:nth-child(2), .carriage .wheel:nth-child(2) {
-    right: 5px;
+.steam {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: steamAnimation 1s linear infinite;
+}
+
+@keyframes steamAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) scale(2);
+        opacity: 0;
+    }
 }
 
 @keyframes moveTrain {
@@ -185,4 +207,4 @@ body {
     100% {
         transform: rotate(360deg);
     }
-    }
+}
