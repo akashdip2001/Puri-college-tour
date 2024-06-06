@@ -141,7 +141,7 @@ body {
     border-radius: 10px;
     margin-right: 10px;
     position: relative;
-    box-shadow: -5px 5px 15px rgba(0,0,0,0.3); /* Dark shading */
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3); /* Dark shading */
     background: linear-gradient(145deg, #ff4d4d, #e60000); /* Light shading */
 }
 
@@ -171,8 +171,9 @@ body {
 
 .steam {
     position: absolute;
-    top: -30px;
+    top: -20px; /* Adjust the vertical position of the steam */
     left: 50%;
+    transform: translateX(-50%);
     width: 10px;
     height: 10px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -182,11 +183,11 @@ body {
 
 @keyframes steamAnimation {
     0% {
-        transform: translateY(0) scale(1);
+        transform: translateX(-50%) translateY(0) scale(1);
         opacity: 1;
     }
     100% {
-        transform: translateY(-50px) scale(2);
+        transform: translateX(-50%) translateY(-50px) scale(2);
         opacity: 0;
     }
 }
