@@ -7,6 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+   <style>
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+       
+        .button {
+            /* background-color: #4CAF50; */
+            background-image: linear-gradient(-180deg, #00D775, #00BD68);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+       .btn-4 {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .btn-4 span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-4:after {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -150px;
+            width: 50px;
+            height: 155px;
+            background: #fff;
+            opacity: 0.2;
+            transform: rotate(35deg);
+            animation: slideIn 4s infinite cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        @keyframes slideIn {
+            0% {
+                left: -150px; /* Adjusted initial left position */
+            }
+            40% {
+                left: 120%;
+            }
+            90% {
+                left: -150%;
+            }  
+        }
+   </style>
+    <div class="button-container">
+        <a href="https://drive.google.com/drive/folders/1WFvQcyCkWjS_ln83Ebi9bh8Q-eAlnrOc" class="button btn btn-4">Tickets</a>
+        <a href="#" class="button btn btn-4">pictures</a>
+        <!-- <a href="#" class="policy">Terms of Service</a> -->
+    </div>
     <div class="container">
         <!-- Heading for mobile devices -->
         <h1 class="title mobile-title">Countdown to<br>6 September 2024<br>7:20 PM</h1>
