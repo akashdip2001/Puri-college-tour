@@ -21,6 +21,7 @@ body {
 .container {
     text-align: center;
     padding: 20px;
+    padding-top: 5px;
 }
 
 .title {
