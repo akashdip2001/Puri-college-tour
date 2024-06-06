@@ -121,6 +121,7 @@ body {
     display: flex;
     align-items: center;
     animation: moveTrain 5s linear forwards;
+    animation-delay: 1s; /* delay to let the countdown be visible first */
 }
 
 @keyframes moveTrain {
@@ -147,14 +148,24 @@ body {
     background: #555;
 }
 
+.chimney {
+    width: 20px;
+    height: 20px;
+    background: #222;
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    border-radius: 5px;
+}
+
 .smoke {
     width: 20px;
     height: 20px;
     background: #ccc;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: 30px;
+    top: -30px;
+    left: 35px;
     animation: smoke 1s infinite alternate;
 }
 
@@ -170,13 +181,25 @@ body {
 }
 
 .wheels {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    bottom: -10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wheels::before, .wheels::after {
+    content: '';
     width: 20px;
     height: 20px;
     background: #000;
     border-radius: 50%;
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
+    animation: spin 0.5s linear infinite;
+}
+
+.coach .wheels::before, .coach .wheels::after {
     animation: spin 0.5s linear infinite;
 }
 
