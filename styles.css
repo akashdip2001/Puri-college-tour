@@ -159,6 +159,7 @@ body {
     border-radius: 50%;
     border: 2px solid #000;
     animation: rotateWheel 1s linear infinite;
+    box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.5), 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 
 .engine .wheel:nth-child(2), .carriage .wheel:nth-child(2) {
