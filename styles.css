@@ -179,6 +179,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     animation: steamAnimation 1s linear infinite;
+    z-index: 10;
 }
 
 @keyframes steamAnimation {
