@@ -170,16 +170,15 @@
 }
 
 /* OBJECTS */
-
 .cloud {
-  background: #fff;
-  background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
-  background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-  background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-  background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-  background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+  background: rgba(255, 255, 255, 0.8); /* Adjusted to add transparency */
+  background: -moz-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%, rgba(241, 241, 241, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(255, 255, 255, 0.8)), color-stop(100%,rgba(241, 241, 241, 0.8)));
+  background: -webkit-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(241, 241, 241, 0.8) 100%);
+  background: -o-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(241, 241, 241, 0.8) 100%);
+  background: -ms-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(241, 241, 241, 0.8) 100%);
+  background: linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(241, 241, 241, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 255, 255, 0.8)', endColorstr='rgba(241, 241, 241, 0.8)',GradientType=0 );
   
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -195,10 +194,10 @@
 }
 
 .cloud:after, .cloud:before {
-    background: #fff;
+  background: rgba(255, 255, 255, 0.8); /* Adjusted to add transparency */
   content: '';
   position: absolute;
-  z-indeX: -1;
+  z-index: -1;
 }
 
 .cloud:after {
@@ -222,6 +221,8 @@
   right: 50px;
   top: -90px;
 }
+
+
    </style>
     <div class="button-time" >
 <div id="background-wrap">
