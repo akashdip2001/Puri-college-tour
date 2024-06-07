@@ -172,28 +172,19 @@
 /* OBJECTS */
 .cloud {
   background: rgba(255, 255, 255, 0.8); /* Base color with transparency */
-  background: -moz-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%, rgba(200, 200, 200, 0.8) 100%); /* Light to dark gradient */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(255, 255, 255, 0.8)), color-stop(100%,rgba(200, 200, 200, 0.8)));
-  background: -webkit-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(200, 200, 200, 0.8) 100%);
-  background: -o-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(200, 200, 200, 0.8) 100%);
-  background: -ms-linear-gradient(top,  rgba(255, 255, 255, 0.8) 5%,rgba(200, 200, 200, 0.8) 100%);
-  background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.8) 5%,rgba(200, 200, 200, 0.8) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 255, 255, 0.8)', endColorstr='rgba(200, 200, 200, 0.8)',GradientType=0 );
-  
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 5%, rgba(200, 200, 200, 0.8) 100%); /* Light to dark gradient */
   border-radius: 100px;
-  
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), inset 0 -5px 10px rgba(0, 0, 0, 0.1);
-
   height: 120px;
   position: relative;
   width: 350px;
 }
 
 .cloud:after, .cloud:before {
-  background: rgba(255, 255, 255, 0.8); /* Base color with transparency */
   content: '';
   position: absolute;
   z-index: -1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 5%, rgba(200, 200, 200, 0.8) 100%); /* Same gradient */
 }
 
 .cloud:after {
