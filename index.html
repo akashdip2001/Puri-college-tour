@@ -240,6 +240,18 @@
     animation: scaleIn 0.5s, scaleOut 0.5s 4.5s;
 }
 
+       .modal-content img {
+    width: 100%;
+    max-width: 250px; /* Adjust max-width as needed */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .modal-content img {
+        max-width: 150px; /* Adjust max-width for mobile screens */
+    }
+}
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
