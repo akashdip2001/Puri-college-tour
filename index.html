@@ -272,6 +272,30 @@
     to {transform: scale(0);}
 }
 
+       #toggle-qr-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px 32px;
+}
+
+#qr-button {
+    display: none;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
    </style>
     <div class="button-time" >
 <div id="background-wrap">
@@ -296,18 +320,30 @@
     </div>
 </div>
         
-    <div class="button-container">
+  <!--  <div class="button-container">
         <a href="https://drive.google.com/drive/folders/1WFvQcyCkWjS_ln83Ebi9bh8Q-eAlnrOc" class="button btn btn-4">Tickets</a>
         <a href="#" class="button btn btn-4">pictures</a>
-        <!-- <a href="#" class="policy">Terms of Service</a> -->
          <button class="button btn-4" id="qr-button"><span>QR</span></button>
-    </div>
-<!-- QR animation -->
+    </div> -->
+<!-- QR animation 
         <div id="qr-modal" class="modal">
     <div class="modal-content">
         <img src="img/qrcode.jpg" alt="QR Code">
     </div>
-        </div>
+        </div> -->
+
+        <div class="button-container">
+    <a href="https://drive.google.com/drive/folders/1WFvQcyCkWjS_ln83Ebi9bh8Q-eAlnrOc" class="button btn btn-4">Tickets</a>
+    <a href="#" class="button btn btn-4">Pictures</a>
+    <button class="button btn-4" id="toggle-qr-button"><span>&rarr;</span></button>
+    <button class="button btn-4" id="qr-button" style="display: none;"><span>QR</span></button>
+</div>
+
+<div id="qr-modal" class="modal">
+    <div class="modal-content">
+        <img src="img/qrcode.jpg" alt="QR Code">
+    </div>
+</div>
         
     <div class="container">
         <!-- Heading for mobile devices -->
@@ -367,7 +403,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     var qrButton = document.getElementById('qr-button');
+    var toggleQrButton = document.getElementById('toggle-qr-button');
     var modal = document.getElementById('qr-modal');
+
+    toggleQrButton.onclick = function() {
+        qrButton.style.display = 'block';
+        toggleQrButton.style.display = 'none';
+    }
 
     qrButton.onclick = function() {
         modal.style.display = 'block';
