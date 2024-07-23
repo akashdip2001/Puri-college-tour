@@ -20,3 +20,17 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+
+/* UPI payment */
+        function payWithUPI() {
+            const upiID = "soumyadeepkoley1301@oksbi";
+            const amount = prompt("Bal কত টাকা দিবি দে, আর ফেরত পাওয়ার আশায় থাকিস না, মুর্খ --> amount টা enter কর মুর্খ:");
+            if (amount && !isNaN(amount) && parseFloat(amount) > 0) {
+                const upiLink = `upi://pay?pa=${upiID}&pn=Soumyadeep%20Koley&am=${amount}&cu=INR`;
+                window.location.href = upiLink;
+            } else {
+                alert("Please enter a valid amount.");
+            }
+        }
+    
