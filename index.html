@@ -355,10 +355,19 @@
     <div class="modal-content">
         <img src="img/qrcode.jpg" alt="QR Code">
     </div>
-    <div class="modal-content" style="display: flex;align-items: center;justify-content: center;">
-        <button onclick="payWithUPI()">Pay with UPI</button>
-        <p style="colour: red;">NB: maybe it's not 🚫 working at 1st attempt, Try 2nd time ...</p>
-    </div>
+
+    <div class="modal-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <button onclick="payWithUPI()">Pay with UPI</button>
+    <p style="color: red; animation: blink 1s step-start infinite;">NB: maybe it's not 🚫 working at 1st attempt, Try 2nd time ...</p>
+</div>
+
+<style>
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
 </div>
         
     <div class="container">
